@@ -5,10 +5,10 @@ import { changeIcon } from 'react-native-change-icon';
 export default function App() {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => changeIcon('checked')}>
+      <TouchableOpacity onPress={() => changeIcon('checked', 'cancel')}>
         <Text style={styles.button}>SWITCH TO CHECKED ICON</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => changeIcon('cancel')}>
+      <TouchableOpacity onPress={() => changeIcon('cancel', 'checked')}>
         <Text style={styles.button}>SWITCH TO CANCEL ICON</Text>
       </TouchableOpacity>
     </View>

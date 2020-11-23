@@ -2,8 +2,8 @@
 class ChangeIcon: NSObject {
 
     @available(iOS 10.3, *)
-    @objc(changeIcon:withResolver:withRejecter:)
-    func changeIcon(iconName: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+    @objc(changeIcon:disableIcon:withResolver:withRejecter:)
+    func changeIcon(iconName: String, disableIcon: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
         DispatchQueue.main.async {
             if !UIApplication.shared.supportsAlternateIcons {
                 reject("Error", "Alternate icon not supported", nil)
